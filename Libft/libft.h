@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gdorcas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 11:52:03 by gdorcas           #+#    #+#             */
-/*   Updated: 2019/12/09 15:14:18 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/04 14:04:40 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,6 @@ int					ft_power(int nb, int power);
 size_t				ft_lstsize(t_list *source);
 int					get_next_line(int fd, char **line);
 char				*ft_itoa_sign(int n);
+int					gnl_one_desc(int fd, char **line);
 
 #endif

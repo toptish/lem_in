@@ -28,7 +28,7 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c\
       ft_print_float.c ft_print_ou.c ft_print_s.c \
       ft_print_xxxp.c ft_printf.c ft_switch_print.c \
       ft_atoi.c ft_strlen.c ft_display.c ft_itoa.c \
-      ft_check_float.c ft_print_float_add.c ft_parser_add.c
+      ft_check_float.c ft_print_float_add.c ft_parser_add.c gnl_one_desc.c
 	  
 HEADER = libft.h
 OFILES = $(subst .c,.o,$(SRC))

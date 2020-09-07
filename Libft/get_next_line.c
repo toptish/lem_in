@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gdorcas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 13:26:17 by gdorcas           #+#    #+#             */
-/*   Updated: 2019/09/27 16:26:23 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/04 14:05:31 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_where_n(char *s)
+static int				ft_where_n(char *s)
 {
 	int			i;
 
@@ -24,7 +24,7 @@ int				ft_where_n(char *s)
 	return (i);
 }
 
-int				ft_give_line(char **str, char **line, int fd)
+static int				ft_give_line(char **str, char **line, int fd)
 {
 	char		*tmp;
 	int			num_n;
@@ -44,7 +44,7 @@ int				ft_give_line(char **str, char **line, int fd)
 	return (1);
 }
 
-int				get_next_line(const int fd, char **line)
+int						get_next_line(const int fd, char **line)
 {
 	size_t		ret;
 	static char	*s[4864];

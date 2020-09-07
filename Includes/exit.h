@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   exit.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/03 20:28:00 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/07 13:56:35 by gdorcas          ###   ########.fr       */
+/*   Created: 2020/09/04 09:02:46 by gdorcas           #+#    #+#             */
+/*   Updated: 2020/09/07 13:56:46 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <lemin.h>
-#include <exit.h>
+#ifndef EXIT_H
+# define EXIT_H
 
-int		main(void)
-{
-	lemin();
-	ft_free_memory();
-}
+void		ft_free_memory();
+	
+#endif

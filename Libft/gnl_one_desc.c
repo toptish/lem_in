@@ -6,7 +6,7 @@
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 14:14:28 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/03 14:21:08 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/04 14:05:00 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static int			ft_give_line(char *str, char **line)
 	return (1);
 }
 
-int				get_next_line(const int fd, char **line)
+int				gnl_one_desc(const int fd, char **line)
 {
 	size_t		ret;
 	static char	*s;
