@@ -6,19 +6,20 @@
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 08:57:52 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/10 14:09:34 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/10 15:46:27 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <lemin.h>
 #include <libft.h>
 #include <read_input.h>
+#include <errors.h>
 
 static unsigned int		read_line(char *line, t_farm *farm, size_t i)
 {
 	static unsigned int	state;
 
-	state = 1;
+	state = (NO_ROOMS | NO_ANTS | NO_EDGES | NO_START | NO_END);
 	if (i == 0)
 	{
 		validate_ants(line, &state, farm);
@@ -31,10 +32,10 @@ static unsigned int		read_line(char *line, t_farm *farm, size_t i)
 	}
 	else if (line[0] == '#')
 		return (0);
-	else if (ft_strchr(line, ' '))
-		validate_room(line, &state, farm);
-	else if (ft_strchr(line, '-'))	
-		validate_edge(line, &state, farm);
+	else (validate_room(line, &state, farm) || validate_edge(line, &state, farm))
+	{
+
+	}
 	return (state);
 }
 
@@ -55,10 +56,12 @@ unsigned int			read_input(t_farm *farm)
 		}
 		state = read_line(line, farm, i);
 		free(line);
-		if (state)
+		if (state ^ NO_ROOMS ^ NO_ANTS ^ NO_EDGES ^ NO_START ^ NO_END)
 			return (state);
 		i++;
 	}
+	if (state)
+		return (state);
 	free(line);
 	return(0);
 }

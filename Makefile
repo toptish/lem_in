@@ -1,6 +1,6 @@
 NAME = lem-in
 
-FILES = main.c lemin.c read_input.c farm.c exit.c
+FILES = main.c lemin.c read_input.c farm.c exit.c read_input_utils.c validate_input.c
 
 LFTDIR = ./Libft/
 

@@ -3,9 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gdorcas <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/09/06 11:13:07 by gdorcas           #+#    #+##   Updated: 2020/08/04 11:27:37 by akimovdo         ###   ########lyon.fr   #######.fr        #
+#    Created: 2020/09/10 14:42:00 by gdorcas           #+#    #+#              #
+#    Updated: 2020/09/10 14:42:08 by gdorcas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +27,7 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c\
 	  ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_itoa_base.c ft_power.c\
 	  ft_sqrt.c ft_lstsize.c get_next_line.c ft_initial.c ft_parser.c ft_print_d.c \
       ft_print_float.c ft_print_ou.c ft_print_s.c ft_is_number.c\
-      ft_print_xxxp.c ft_printf.c ft_switch_print.c \
+      ft_print_xxxp.c ft_printf.c ft_switch_print.c ft_refcount.c\
       ft_atoi.c ft_strlen.c ft_display.c ft_itoa.c \
       ft_check_float.c ft_print_float_add.c ft_parser_add.c gnl_one_desc.c
 	  
