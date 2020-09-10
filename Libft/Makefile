@@ -25,7 +25,7 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c\
 	  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c ft_lstdelone.c\
 	  ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_itoa_base.c ft_power.c\
 	  ft_sqrt.c ft_lstsize.c get_next_line.c ft_initial.c ft_parser.c ft_print_d.c \
-      ft_print_float.c ft_print_ou.c ft_print_s.c \
+      ft_print_float.c ft_print_ou.c ft_print_s.c ft_is_number.c\
       ft_print_xxxp.c ft_printf.c ft_switch_print.c \
       ft_atoi.c ft_strlen.c ft_display.c ft_itoa.c \
       ft_check_float.c ft_print_float_add.c ft_parser_add.c gnl_one_desc.c

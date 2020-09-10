@@ -6,13 +6,20 @@
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 09:02:26 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/07 13:56:28 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/10 14:09:24 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <exit.h>
+#include <lemin.h>
 
 void		ft_free_memory()
 {
 	
+}
+
+int			ft_error(t_farm *farm)
+{
+	if (farm->state)
+		
 }

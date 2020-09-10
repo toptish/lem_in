@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit.h                                             :+:      :+:    :+:   */
+/*   farm.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 09:02:46 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/10 14:09:12 by gdorcas          ###   ########.fr       */
+/*   Created: 2020/09/09 19:11:50 by gdorcas           #+#    #+#             */
+/*   Updated: 2020/09/10 14:09:15 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EXIT_H
-# define EXIT_H
-# include <lemin.h>
+#ifndef FARM_H
+# define FARM_H 
 
-void		ft_free_memory();
-int			ft_error(t_farm *farm);
-	
+void	farm_init(t_farm *farm);
+
 #endif
