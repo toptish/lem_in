@@ -6,7 +6,7 @@
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 14:25:03 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/10 15:46:30 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/11 11:21:05 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,16 @@ unsigned int	validate_cmd(char *line, unsigned int *state, t_farm *farm)
 
 unsigned int	validate_room(char *line, unsigned int *state, t_farm *farm)
 {
-	if (ft_strchr(line, " "))
-		ft_strsplit
+	char	**room;
+	size_t	len;
+	
+	if (ft_strchr(line, ' '))
+		room = ft_strsplit(line, ' ');
+	if ((len = ft_char_arr_len(room) != 3))
+		return (0);
+	else 
+		
+	
 }
 
 unsigned int	validate_edge(char *line, unsigned int *state, t_farm *farm)

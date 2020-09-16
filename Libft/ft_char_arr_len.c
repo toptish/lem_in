@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_input.h                                       :+:      :+:    :+:   */
+/*   ft_char_arr_len.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 08:58:16 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/11 11:20:49 by gdorcas          ###   ########.fr       */
+/*   Created: 2020/09/11 11:08:53 by gdorcas           #+#    #+#             */
+/*   Updated: 2020/09/11 11:11:09 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef READ_INPUT_H
-# define READ_INPUT_H
-# include <lemin.h>
+#include <libft.h>
 
-unsigned int	read_input(t_farm *farm);
-unsigned int	validate_cmd(char *line, unsigned int *state, t_farm *farm);
-unsigned int	validate_room(char *line, unsigned int *state, t_farm *farm);
-unsigned int	validate_edge(char *line, unsigned int *state, t_farm *farm);
-unsigned int	validate_ants(char *line, unsigned int *state, t_farm *farm);
+size_t	ft_char_arr_len(char **arr)
+{
+	size_t len;
 
-#endif
+	len = 0;
+	if (!*arr || !arr)
+		return;
+	while (arr[len])
+		len++;
+	return (len);
+}

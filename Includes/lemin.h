@@ -6,7 +6,7 @@
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 08:58:12 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/10 15:46:39 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/11 11:20:59 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,13 @@ typedef struct 				s_graph
 	unsigned int			end;
 }							t_graph;
 
+typedef struct	s_room
+{
+	char		*name;
+	int			x;
+	int			y;
+}				t_room;
+
 typedef struct				s_farm
 {
 	int						ants;
@@ -54,6 +61,7 @@ typedef struct				s_farm
 	// t_vect					connects;
 	char					**names;
 	char					**connects;
+	t_room					*rooms;
 	int						start;
 	int						end;	
 	t_graph					graph;

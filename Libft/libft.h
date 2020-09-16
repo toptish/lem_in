@@ -6,7 +6,7 @@
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 11:52:03 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/10 14:43:16 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/11 11:45:05 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,14 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct	s_vector
+{
+	void 			*mem;
+	size_t			item_size;
+	size_t			curlen;
+	size_t			max_len;
+}				t_vect;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -97,5 +105,6 @@ char				*ft_itoa_sign(int n);
 int					gnl_one_desc(int fd, char **line);
 void				REF(void *data);
 void 				UNREF(void *data);
+size_t				ft_char_arr_len(char **arr);
 
 #endif
