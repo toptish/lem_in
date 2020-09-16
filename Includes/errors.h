@@ -6,7 +6,7 @@
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 09:17:41 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/10 15:46:44 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/16 17:38:55 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 # define ANTS				(1 << 1)			
 # define ROOMS				(1 << 2)
 # define EDGES				(1 << 3)
-# define START_END			(1 << 4)
+# define START				(1 << 4)
+# define END				(1 << 5)
 
 # define ERROR				(1 << 11)
 # define MEM_ERROR			(1 << 12)
@@ -26,7 +27,7 @@
 # define NO_END				(1 << 16)
 # define NO_EDGES			(1 << 17)
 # define CYCLES				(1 << 18)
-# define DOUBLES			(1 << 19)
+# define DOUBLES_COORD		(1 << 19)
 # define DOUBLES_NAMES		(1 << 20)
 # define DOUBLE_EDGES		(1 << 21)
 # define WRONG_CMD			(1 << 22)

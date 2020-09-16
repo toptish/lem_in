@@ -6,7 +6,7 @@
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 11:52:03 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/11 11:45:05 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/16 12:30:56 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef struct	s_vector
+typedef struct	s_vect
 {
 	void 			*mem;
 	size_t			item_size;
@@ -106,5 +106,6 @@ int					gnl_one_desc(int fd, char **line);
 void				REF(void *data);
 void 				UNREF(void *data);
 size_t				ft_char_arr_len(char **arr);
+unsigned long		ft_options(char **argv);
 
 #endif

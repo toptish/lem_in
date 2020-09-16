@@ -6,7 +6,7 @@
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 08:57:52 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/10 15:46:27 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/16 17:38:40 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <read_input.h>
 #include <errors.h>
 
-static unsigned int		read_line(char *line, t_farm *farm, size_t i)
+static unsigned int		read_line(char *line, t_farm *farm, size_t *i)
 {
 	static unsigned int	state;
 
@@ -31,10 +31,14 @@ static unsigned int		read_line(char *line, t_farm *farm, size_t i)
 		return (state);
 	}
 	else if (line[0] == '#')
-		return (0);
-	else (validate_room(line, &state, farm) || validate_edge(line, &state, farm))
 	{
-
+		*i--;
+		return (state);
+	}
+	else if (!validate_room(line, &state, farm) && !validate_edge(line, &state, farm))
+	{
+		state = state | ERROR;
+		return (state);
 	}
 	return (state);
 }
@@ -54,11 +58,13 @@ unsigned int			read_input(t_farm *farm)
 			ft_memdel((void **)&line);
 			return (-1);
 		}
-		state = read_line(line, farm, i);
+		state = read_line(line, farm, &i);
 		free(line);
-		if (state ^ NO_ROOMS ^ NO_ANTS ^ NO_EDGES ^ NO_START ^ NO_END)
-			return (state);
+		farm->state = state;
 		i++;
+		if (state & ~NO_ROOMS & ~NO_EDGES & ~NO_START & ~NO_END && ~NO_ANTS && i != 0 ||
+		state & ~NO_ROOMS & ~NO_EDGES & ~NO_START & ~NO_END)
+			return (state);
 	}
 	if (state)
 		return (state);

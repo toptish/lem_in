@@ -6,7 +6,7 @@
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 08:57:57 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/10 15:46:33 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/16 17:38:37 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 #include <read_input.h>
 #include <exit.h>
 
-void		lemin(void)
+int		main(void)
 {
 	t_farm		farm;
 
 	farm_init(&farm);
 	if (read_input(&farm))
 		ft_error(&farm);
+	ft_free_memory(&farm);
 }

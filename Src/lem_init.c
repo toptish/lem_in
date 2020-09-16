@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   lem_init.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/03 20:28:00 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/10 15:46:31 by gdorcas          ###   ########.fr       */
+/*   Created: 2020/09/16 17:29:52 by gdorcas           #+#    #+#             */
+/*   Updated: 2020/09/16 17:38:36 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <lemin.h>
-#include <exit.h>
 
-int		main(void)
+void	farm_init(t_farm *farm)
 {
-	lemin();
-	ft_free_memory();
+	ft_bzero(farm, sizeof(t_farm));
+	farm->start = FARM_INIT_WEIGHT;
+	farm->end = FARM_INIT_WEIGHT;
 }
+
+void	get_rooms()
+{
+
+}
+
+void	get_edges()
+{
+
+}
+
+static t_node	**create_node(t_room *room)
+{
+
+}	

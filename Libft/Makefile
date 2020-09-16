@@ -6,7 +6,7 @@
 #    By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/10 14:42:00 by gdorcas           #+#    #+#              #
-#    Updated: 2020/09/11 11:11:52 by gdorcas          ###   ########.fr        #
+#    Updated: 2020/09/16 12:28:05 by gdorcas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,9 +29,10 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c\
       ft_print_float.c ft_print_ou.c ft_print_s.c ft_is_number.c\
       ft_print_xxxp.c ft_printf.c ft_switch_print.c ft_refcount.c\
       ft_atoi.c ft_strlen.c ft_display.c ft_itoa.c ft_char_arr_len.c\
-      ft_check_float.c ft_print_float_add.c ft_parser_add.c gnl_one_desc.c
+      ft_check_float.c ft_print_float_add.c ft_parser_add.c gnl_one_desc.c\
+	  ft_options.c
 	  
-HEADER = libft.h
+HEADER = -Ilibft.h
 OFILES = $(subst .c,.o,$(SRC))
 FLAGS = -Wall -Wextra -Werror
 
@@ -55,7 +56,7 @@ $(NAME): $(OFILES)
 
 %.o: %.c
 	@echo $(PURPLE) " - Compiling $< into $@" $(EOC)
-	@gcc $(FLAGS) $< -c -o $@
+	@gcc $(HEADER) $(FLAGS) $< -c -o $@
 
 clean:
 	@echo $(RED) " - Removing $(NAME_SH) object files" $(EOC)

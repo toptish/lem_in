@@ -6,7 +6,7 @@
 /*   By: gdorcas <gdorcas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 08:58:12 by gdorcas           #+#    #+#             */
-/*   Updated: 2020/09/11 11:20:59 by gdorcas          ###   ########.fr       */
+/*   Updated: 2020/09/16 17:38:58 by gdorcas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 # define MAX_EDGES			(INT_MAX >> 1)
 # define FARM_INIT_WEIGHT	(INT_MAX >> 1)
 
-typedef struct				s_vect
-{
-	void					*ptr;
-	int						len;
-}							t_vect;
+// typedef struct				s_vect
+// {
+// 	void					*ptr;
+// 	int						len;
+// }							t_vect;
 
 typedef struct				s_node
 {
@@ -47,19 +47,20 @@ typedef struct 				s_graph
 	unsigned int			end;
 }							t_graph;
 
-typedef struct	s_room
+typedef struct				s_room
 {
-	char		*name;
-	int			x;
-	int			y;
-}				t_room;
+	int						id;
+	char					*name;
+	int						x;
+	int						y;
+}							t_room;
 
 typedef struct				s_farm
 {
 	int						ants;
 	// t_vect					names;
 	// t_vect					connects;
-	char					**names;
+	char					**names_str;
 	char					**connects;
 	t_room					*rooms;
 	int						start;
